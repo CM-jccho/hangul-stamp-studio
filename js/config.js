@@ -8,7 +8,7 @@ window.CONFIG = {
   /* Where the "Buy PRO" button sends people.
      Put your Gumroad / Payhip / Lemon Squeezy product URL here.
      Leave empty ('') to show the "payment not connected yet" note. */
-  PRO_BUY_URL: '',
+  PRO_BUY_URL: 'https://jaechul4.gumroad.com/l/hangul-stamp-studio',
 
   /* Price shown on the PRO card (display only). */
   PRO_PRICE: '$4.90',
@@ -28,5 +28,5 @@ window.CONFIG = {
   PRO_PNG_SIZE: 3000,
 
   /* Public URL used in the watermark. */
-  SITE_URL: 'hangul-stamp.studio'
+  SITE_URL: 'cm-jccho.github.io/hangul-stamp-studio'
 };
