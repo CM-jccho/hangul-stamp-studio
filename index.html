@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hangul Stamp Studio · 한글 낙관 도장 · Tu nombre en hangul</title>
+<meta name="description" content="Escribe tu nombre y recibe un sello coreano (낙관), caligrafía a pincel, un tatuaje minimalista o un póster de Seúl. Español, português, English, 한국어.">
+<meta property="og:title" content="Hangul Stamp Studio — tu nombre en hangul">
+<meta property="og:description" content="낙관 sello coreano, caligrafía, tatuaje y póster. 4 idiomas, gratis.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23B0332B'/><text x='50' y='73' font-size='62' text-anchor='middle' fill='%23F2E9D8' font-family='serif'>한</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Brush+Script&family=Song+Myung&family=Noto+Sans+KR:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true">한</span>
+    <span class="brand-text">
+      <strong>Hangul Stamp Studio</strong>
+      <small data-i18n="brand.sub">한글 스탬프 스튜디오</small>
+    </span>
+  </a>
+  <nav class="site-nav">
+    <a href="#studio" data-i18n="nav.studio">Estudio</a>
+    <a href="#styles" data-i18n="nav.styles">Estilos</a>
+    <a href="#pro" data-i18n="nav.pro">PRO</a>
+    <a href="#about" data-i18n="nav.about">Acerca de</a>
+  </nav>
+  <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Elegir idioma">
+    <button type="button" data-lang="es">ES</button>
+    <button type="button" data-lang="pt">PT</button>
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="ko">KO</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="badge"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.badge">Hecho a mano en Hangul</span></p>
+      <h1 data-i18n="hero.title">Tu nombre, escrito en coreano</h1>
+      <p class="hero-sub" data-i18n="hero.sub"></p>
+      <div class="hero-row">
+        <a class="btn btn-primary" href="#studio" data-i18n="hero.cta">Probar gratis</a>
+        <span class="hero-note" data-i18n="hero.note"></span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="art-card art-seal">소피아</span>
+      <span class="art-card art-brush">마테오</span>
+      <span class="art-card art-tattoo">한글</span>
+      <span class="art-card art-poster">서울</span>
+    </div>
+  </section>
+
+  <section class="studio" id="studio">
+
+    <div class="col col-controls">
+
+      <div class="panel" id="panel-name">
+        <h2 class="step-title"><span data-i18n="studio.step1">1 · Escribe tu nombre</span></h2>
+        <label class="field-label" for="nameInput" data-i18n="input.label">Tu nombre en letras latinas</label>
+        <div class="input-row">
+          <input id="nameInput" type="text" autocomplete="off" spellcheck="false" placeholder="Sofía, Mateo, Valentina…" data-i18n-ph="input.ph">
+        </div>
+        <div class="examples">
+          <span class="examples-label" data-i18n="input.examples">Nombres populares</span>
+          <div class="chips" id="exampleChips">
+            <button type="button" class="chip" data-name="Sofía">Sofía</button>
+            <button type="button" class="chip" data-name="Mateo">Mateo</button>
+            <button type="button" class="chip" data-name="Valentina">Valentina</button>
+            <button type="button" class="chip" data-name="Gabriel">Gabriel</button>
+            <button type="button" class="chip" data-name="Camila">Camila</button>
+            <button type="button" class="chip" data-name="Thiago">Thiago</button>
+            <button type="button" class="chip" data-name="João">João</button>
+            <button type="button" class="chip" data-name="Isabella">Isabella</button>
+          </div>
+        </div>
+        <div class="hangul-field">
+          <label class="field-label" for="hangulInput" data-i18n="hangul.label">En hangul (puedes editarlo)</label>
+          <div class="input-row">
+            <input id="hangulInput" type="text" lang="ko" autocomplete="off" spellcheck="false" aria-describedby="hangulHint">
+            <button type="button" class="icon-btn" id="copyHangul" data-i18n-aria="misc.copy" aria-label="Copy hangul" title="Copy">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 3h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-1V6a1 1 0 0 0-1-1H9V4a1 1 0 0 1 0-1Z" fill="currentColor"/><path d="M5 7h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+          </div>
+          <p class="field-hint" id="hangulHint" data-i18n="hangul.hint">Se convierte automáticamente</p>
+        </div>
+
+        <div class="guide" id="guide">
+          <div class="guide-head">
+            <h3 data-i18n="guide.title">Guía de pronunciación</h3>
+            <span class="pill" id="guideOrigin"></span>
+          </div>
+          <p class="guide-hangul" id="guideHangul">소피아</p>
+          <dl class="guide-grid">
+            <div><dt data-i18n="guide.roman">Romanización</dt><dd id="guideRoman" class="mono">so-pi-a</dd></div>
+            <div><dt data-i18n="guide.read">Cómo se lee</dt><dd id="guideSay">so-pi-a</dd></div>
+          </dl>
+          <p class="guide-tip" id="guideTip"></p>
+          <p class="guide-empty" id="guideEmpty" data-i18n="guide.empty" hidden></p>
+        </div>
+      </div>
+
+      <div class="panel" id="styles">
+        <h2 class="step-title"><span data-i18n="studio.step2">2 · Elige un estilo</span></h2>
+        <div class="style-grid" id="styleGrid" role="radiogroup">
+          <button type="button" class="style-card is-active" data-style="seal" role="radio" aria-checked="true">
+            <span class="thumb thumb-seal" aria-hidden="true"><span>한</span></span>
+            <strong data-i18n="style.seal">Sello de tinta roja</strong>
+            <small data-i18n="style.sealDesc">낙관 · sello coreano tradicional</small>
+          </button>
+          <button type="button" class="style-card" data-style="brush" role="radio" aria-checked="false">
+            <span class="thumb thumb-brush" aria-hidden="true"><span>한</span></span>
+            <strong data-i18n="style.brush">Caligrafía a pincel</strong>
+            <small data-i18n="style.brushDesc">붓글씨 · tinta sobre papel de arroz</small>
+          </button>
+          <button type="button" class="style-card" data-style="tattoo" role="radio" aria-checked="false">
+            <span class="thumb thumb-tattoo" aria-hidden="true"><span>한</span></span>
+            <strong data-i18n="style.tattoo">Tatuaje minimalista</strong>
+            <small data-i18n="style.tattooDesc">Línea fina · con pequeño sello</small>
+          </button>
+          <button type="button" class="style-card" data-style="poster" role="radio" aria-checked="false">
+            <span class="thumb thumb-poster" aria-hidden="true"><span>한</span></span>
+            <strong data-i18n="style.poster">Póster Seúl moderno</strong>
+            <small data-i18n="style.posterDesc">Tipografía editorial</small>
+          </button>
+        </div>
+
+        <h2 class="step-title step-title-3"><span data-i18n="studio.step3">3 · Ajusta y descarga</span></h2>
+
+        <div class="opt" data-show="seal">
+          <span class="opt-label" data-i18n="opt.shape">Forma del sello</span>
+          <div class="segmented" data-key="shape">
+            <button type="button" data-value="square" class="is-active" data-i18n="opt.square">Cuadrado</button>
+            <button type="button" data-value="round" data-i18n="opt.round">Redondo</button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="seal">
+          <span class="opt-label" data-i18n="opt.mode">Tipo de grabado</span>
+          <div class="segmented" data-key="mode">
+            <button type="button" data-value="relief" class="is-active" data-i18n="opt.relief">Relieve (주문)</button>
+            <button type="button" data-value="engraved" data-i18n="opt.engraved">Hundido (백문)</button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="brush tattoo">
+          <span class="opt-label" data-i18n="opt.dir">Dirección</span>
+          <div class="segmented" data-key="dir">
+            <button type="button" data-value="vertical" class="is-active" data-i18n="opt.vertical">Vertical</button>
+            <button type="button" data-value="horizontal" data-i18n="opt.horizontal">Horizontal</button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="seal brush tattoo poster">
+          <span class="opt-label" data-i18n="opt.ratio">Formato</span>
+          <div class="segmented" data-key="ratio">
+            <button type="button" data-value="1:1" class="is-active" data-i18n="ratio.square">Perfil 1:1</button>
+            <button type="button" data-value="9:16" data-i18n="ratio.story">Móvil 9:16</button>
+            <button type="button" data-value="4:5" data-i18n="ratio.card">Postal 4:5</button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="seal brush tattoo">
+          <span class="opt-label" data-i18n="opt.bg">Fondo</span>
+          <div class="swatches" data-key="bg">
+            <button type="button" class="swatch is-active" data-value="paper" data-i18n-title="bg.paper" title="Rice paper"><span class="sw sw-paper"></span></button>
+            <button type="button" class="swatch" data-value="white" data-i18n-title="bg.white" title="White"><span class="sw sw-white"></span></button>
+            <button type="button" class="swatch" data-value="none" data-i18n-title="bg.none" title="Transparent"><span class="sw sw-none"></span></button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="poster">
+          <span class="opt-label" data-i18n="opt.bg">Fondo</span>
+          <div class="swatches" data-key="bg">
+            <button type="button" class="swatch is-active" data-value="cream" title="Cream"><span class="sw sw-cream"></span></button>
+            <button type="button" class="swatch" data-value="ink" title="Night"><span class="sw sw-ink"></span></button>
+            <button type="button" class="swatch" data-value="blush" title="Blush"><span class="sw sw-blush"></span></button>
+            <button type="button" class="swatch" data-value="sage" title="Sage"><span class="sw sw-sage"></span></button>
+            <button type="button" class="swatch" data-value="sun" title="Sun"><span class="sw sw-sun"></span></button>
+            <button type="button" class="swatch" data-value="sky" title="Sky"><span class="sw sw-sky"></span></button>
+          </div>
+        </div>
+
+        <div class="opt" data-show="seal brush">
+          <span class="opt-label" data-i18n="opt.ink">Tinta</span>
+          <div class="swatches" data-key="ink">
+            <button type="button" class="swatch is-active" data-value="red" data-i18n-title="ink.red" title="Cinnabar"><span class="sw sw-red"></span></button>
+            <button type="button" class="swatch" data-value="black" data-i18n-title="ink.black" title="Ink black"><span class="sw sw-inkblack"></span></button>
+            <button type="button" class="swatch" data-value="navy" data-i18n-title="ink.navy" title="Night blue"><span class="sw sw-navy"></span></button>
+          </div>
+        </div>
+
+        <div class="opt opt-inline" data-show="seal brush tattoo poster">
+          <label class="switch">
+            <input type="checkbox" id="latinToggle" checked>
+            <span class="track" aria-hidden="true"></span>
+            <span class="switch-label" data-i18n="opt.latin">Nombre en latín</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-view">
+      <div class="panel preview-panel">
+        <div class="preview-head">
+          <h2 data-i18n="preview.title">Vista previa</h2>
+          <span class="mono preview-size" id="previewSize">1080 × 1080</span>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="preview" width="1080" height="1080" data-i18n-aria="a11y.preview" aria-label="Design preview"></canvas>
+          <span class="pro-flag" id="proFlag" data-i18n="misc.proTag" hidden>PRO</span>
+        </div>
+        <p class="preview-hint" data-i18n="preview.hint"></p>
+      </div>
+
+      <div class="dl-grid" id="pro">
+        <div class="panel dl-card">
+          <div class="dl-head">
+            <h2 data-i18n="dl.freeTitle">Gratis</h2>
+            <span class="tag" data-i18n="misc.freeTag">GRATIS</span>
+          </div>
+          <ul class="dl-list">
+            <li data-i18n="dl.free1"></li>
+            <li data-i18n="dl.free2"></li>
+            <li data-i18n="dl.free3"></li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-block" id="freeDownload" data-i18n="dl.freeBtn">Descargar PNG gratis</button>
+        </div>
+
+        <div class="panel dl-card dl-card-pro" id="proCard">
+          <div class="dl-head">
+            <h2 data-i18n="dl.proTitle">PRO</h2>
+            <span class="price"><strong data-price>US$ 4,90</strong></span>
+          </div>
+          <ul class="dl-list">
+            <li data-i18n="dl.pro1"></li>
+            <li data-i18n="dl.pro2"></li>
+            <li data-i18n="dl.pro3"></li>
+            <li data-i18n="dl.pro4"></li>
+          </ul>
+          <div class="dl-actions" id="proActions">
+            <button type="button" class="btn btn-dark" id="proPng" data-i18n="dl.png">PNG alta resolución</button>
+            <button type="button" class="btn btn-dark" id="proSvg" data-i18n="dl.svg">SVG vectorial</button>
+            <button type="button" class="btn btn-dark btn-block" id="proBatch" data-i18n="dl.batch">Descargar paquete (PNG + SVG)</button>
+          </div>
+          <div class="pro-gate" id="proGate">
+            <a class="btn btn-cta btn-block" id="buyBtn" data-i18n="dl.buy" href="#">Comprar PRO</a>
+            <p class="pay-note" id="payNote" data-i18n="dl.noPay"></p>
+            <label class="field-label" for="proCode" data-i18n="dl.codeLabel">¿Ya lo compraste? Escribe tu código</label>
+            <div class="input-row">
+              <input id="proCode" type="text" autocomplete="off" spellcheck="false" placeholder="HANGUL-PRO-2026" data-i18n-ph="dl.codePh">
+              <button type="button" class="btn btn-dark" id="unlockBtn" data-i18n="dl.unlock">Activar</button>
+            </div>
+            <p class="field-hint" data-i18n="dl.demoHint">Código de prueba: HANGUL-PRO-2026</p>
+          </div>
+          <p class="pro-active" id="proActive" data-i18n="dl.active" hidden>PRO activado en este dispositivo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 data-i18n="info.how">Cómo funciona</h2>
+    <div class="about-grid">
+      <article>
+        <h3 data-i18n="info.how1t">1. Escribe tu nombre</h3>
+        <p data-i18n="info.how1d"></p>
+      </article>
+      <article>
+        <h3 data-i18n="info.how2t">2. Elige un estilo</h3>
+        <p data-i18n="info.how2d"></p>
+      </article>
+      <article>
+        <h3 data-i18n="info.how3t">3. Descarga y comparte</h3>
+        <p data-i18n="info.how3d"></p>
+      </article>
+    </div>
+    <div class="about-grid about-grid-2">
+      <article>
+        <h3 data-i18n="info.privacyT">Privacidad</h3>
+        <p data-i18n="info.privacyD"></p>
+      </article>
+      <article>
+        <h3 data-i18n="info.legalT">Cultura, no marcas</h3>
+        <p data-i18n="info.legalD"></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p data-i18n="footer.made">Hecho con 한글 y un poco de tinta.</p>
+  <p class="foot-small" data-i18n="footer.rights"></p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/translit.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
